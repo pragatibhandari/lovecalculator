@@ -1,11 +1,11 @@
 function loveCalculator() {
-  var firstname = document.getElementById("name").value;
-  var lastname = document.getElementById("lastname").value;
-  var fname = document.getElementById("fname");
+  var person1 = document.getElementById("name1").value;
+  var person2 = document.getElementById("name2").value;
+  var dis = document.getElementById("fname");
   var n = Math.random();
-  n = n * 100;
-  n = Math.floor(n) + 1;
-  fname.textContent = firstname + " " + lastname + n;
+  n = n * 70;
+  n = Math.floor(n) + 30;
+  dis.textContent = person1 + " " + person2 + n + "%";
 
   return firstname;
 }

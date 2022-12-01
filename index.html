@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -13,8 +15,8 @@
       <label for="fname">Person 2</label><br />
       <input type="text" id="name2" name="name2" placeholder="person2" /><br />
     </form>
-    <button onclick="loveCalculator()">Calculate</button>
-    <p id="fname"></p>
-    <script src="script.js"></script>
+    <button onclick="loveCalculator(), calculate()">Calculate</button>
+    <h3 id="fname">Calculate your Love</h3>
+    <h1 id="result"></h1>
   </body>
 </html>

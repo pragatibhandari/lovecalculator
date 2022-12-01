@@ -1,0 +1,12 @@
+* {
+  background-color: rgb(202, 20, 20);
+  text-align: center;
+  margin-top: 2%;
+}
+
+#fname {
+  color: blue;
+}
+#result {
+  color: rgb(237, 237, 241);
+}

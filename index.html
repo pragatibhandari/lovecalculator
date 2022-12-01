@@ -9,13 +9,27 @@
     <title>Document</title>
   </head>
   <body>
-    <form>
+    <form onclick="loveCalculator(), calculate()">
       <label for="fname">Person 1</label><br />
-      <input type="text" id="name1" name="name1" placeholder="person1" /><br />
+      <input
+        type="text"
+        id="name1"
+        name="name1"
+        placeholder="person1"
+        required
+      /><br />
       <label for="fname">Person 2</label><br />
-      <input type="text" id="name2" name="name2" placeholder="person2" /><br />
+      <input
+        type="text"
+        id="name2"
+        name="name2"
+        placeholder="person2"
+        required
+      /><br />
     </form>
-    <button onclick="loveCalculator(), calculate()">Calculate</button>
+    <button type="submit" onclick="loveCalculator(), calculate()">
+      Calculate
+    </button>
     <h3 id="fname">Calculate your Love</h3>
     <h1 id="result"></h1>
   </body>

@@ -27,8 +27,8 @@ function calculate() {
   var n = Math.random();
   n = n * 40;
   n = Math.floor(n) + 60;
-
   var dis = document.getElementById("result");
+
   if (person1 != "" && person2 != "") {
     return (dis.textContent = n + " %");
   }

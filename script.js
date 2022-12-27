@@ -1,35 +1,67 @@
-var person1;
-var person2;
+var yourName = document.getElementById("yourname"),
+  theirName = document.getElementById("theirname"),
+  calcBtn = document.querySelector("button"),
+  loveResult = document.getElementById("result"),
+  loveResult1 = document.getElementById("result1"),
+  loveResult2 = document.getElementById("result2"),
+  resultContainer70 = document.querySelector(".alert-success"),
+  resultContainer30 = document.querySelector(".alert-warning"),
+  resultContainerUnder30 = document.querySelector(".alert-danger"),
+  loveScore = Math.random() * 100;
 
-function loveCalculator() {
-  person1 = document.getElementById("name1").value;
-  person1 = person1.toUpperCase();
-  person2 = document.getElementById("name2").value;
-  person2 = person2.toUpperCase();
-  var dis = document.getElementById("fname");
+// Get a integer random number from loveScore variable
+loveScore = Math.floor(loveScore) + 1;
 
-  if (person1 == "" && person2 == "") {
-    return (dis.textContent = "Person 1 and Person 2 missing");
-  } else if (person1 == "") {
-    return (dis.textContent = "Person 1 is missing");
-  } else if (person2 == "") {
-    return (dis.textContent = "Person 2 is missing");
-  } else {
-    return (dis.textContent = person1 + " and " + person2 + " You love is ");
+// Add eventlistener
+calcBtn.addEventListener("click", function () {
+  var loveScore = Math.random() * 100;
+  loveScore = Math.floor(loveScore) + 1;
+
+  if (yourName.value == "" && theirName.value == "") {
+    alert("You can't leave fields empty");
   }
-}
-
-loveCalculator();
-
-function calculate() {
-  person1;
-  person2;
-  var n = Math.random();
-  n = n * 40;
-  n = Math.floor(n) + 60;
-  var dis = document.getElementById("result");
-
-  if (person1 != "" && person2 != "") {
-    return (dis.textContent = n + " %");
+  if (yourName.value == "") {
+    alert("Please Enter Your Name");
   }
-}
+  if (theirName.value == "") {
+    alert("Please Enter Her/His Name");
+  }
+
+  //lovescore conditions
+  else if (loveScore > 70) {
+    resultContainer70.style.display = "block";
+    resultContainer30.style.display = "none";
+    resultContainerUnder30.style.display = "none";
+    loveResult.innerHTML =
+      "Aww yeah! Your Love Score is " +
+      loveScore +
+      "%." +
+      " You and " +
+      theirName.value +
+      " love each other like Ertuğrul Gazi & Halime Sultan. You should get married with " +
+      theirName.value +
+      " very soon. Best of Luck!";
+  } else if (loveScore > 30 && loveScore <= 70) {
+    resultContainer70.style.display = "none";
+    resultContainer30.style.display = "block";
+    resultContainerUnder30.style.display = "none";
+    loveResult1.innerHTML =
+      "So sweet... Your Love Score is " +
+      loveScore +
+      "%." +
+      " You and " +
+      theirName.value +
+      " love each other more than anything in the world.";
+  } else if (loveScore <= 30) {
+    resultContainer70.style.display = "none";
+    resultContainer30.style.display = "none";
+    resultContainerUnder30.style.display = "block";
+    loveResult2.innerHTML =
+      "Oh no... Your Love Score is " +
+      loveScore +
+      "%." +
+      " You and " +
+      theirName.value +
+      " love each other like oil and water.";
+  }
+});

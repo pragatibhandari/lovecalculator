@@ -1,4 +1,4 @@
-# Love calculator
+# Love Calculator
 
 ###### A simple calculator to calculate love.
 
